@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Songs that I dedicate to you ✨</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <style>
+    /* --- Song Page Styling Add-ons --- */
+    .song-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;
+      gap: 20px;
+    }
+
+    .song-section img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .song-info {
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .song-info h3 {
+      color: #d46ba0;
+      margin: 5px 0 10px 0;
+    }
+
+    .song-description {
+      color: #555;
+      font-size: 16px;
+      text-align: justify;
+      margin-top: 10px;
+      line-height: 1.7;
+    }
+
+    button.play-btn {
+      background-color: #d46ba0;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    button.play-btn:hover {
+      background-color: #b3668f;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body class="fade-in">
+  <canvas id="confetti"></canvas>
+
+  <div class="container">
+    <h2>Songs that I dedicate to you ✨</h2>
+    <p>Every song here carries a piece of how I feel for you, Kimberly Joy. 🎶</p>
+
+    <div class="song-section">
+      <img src="songsalbum/youruniversealbum.png" alt="Your Universe Album">
+      <div class="song-info">
+        <h3>Your Universe - Rico Blanco</h3>
+        <button class="play-btn" onclick="playSong('song1')">Play</button>
+        <audio id="song1" src="music/youruniverse.mp3"></audio>
+      </div>
+    </div>
+    <div class="song-section">
+      <img src="songsalbum/aphroditealbum.png" alt="Your Universe Album">
+      <div class="song-info">
+        <h3>Aphrodite - The Ridleys</h3>
+        <button class="play-btn" onclick="playSong('song2')">Play</button>
+        <audio id="song2" src="music/aphrodite.mp3"></audio>
+      </div>
+    </div>
+    <div class="song-section">
+      <img src="songsalbum/justthewayyouarealbum.png" alt="Your Universe Album">
+      <div class="song-info">
+        <h3>Just The Way You Are - Bruno Mars</h3>
+        <button class="play-btn" onclick="playSong('song3')">Play</button>
+        <audio id="song3" src="music/justthewayyouare.mp3"></audio>
+      </div>
+    </div>
+    <div class="song-section">
+      <img src="songsalbum/missindependentalbum.png" alt="Your Universe Album">
+      <div class="song-info">
+        <h3>Miss Independent - Ne-YO</h3>
+        <button class="play-btn" onclick="playSong('song4')">Play</button>
+        <audio id="song4" src="music/missindependent.mp3"></audio>
+      </div>
+    </div>
+    <div class="song-section">
+      <img src="songsalbum/fallingforyoualbum.png" alt="Your Universe Album">
+      <div class="song-info">
+        <h3>Fallingforyou - The 1975</h3>
+        <button class="play-btn" onclick="playSong('song5')">Play</button>
+        <audio id="song5" src="music/fallingforyou.mp3"></audio>
+      </div>
+    </div>
+    <div class="song-section">
+      <img src="songsalbum/sanctuaryalbum.png" alt="Your Universe Album">
+      <div class="song-info">
+        <h3>Sanctuary - Joji</h3>
+        <button class="play-btn" onclick="playSong('song6')">Play</button>
+        <audio id="song6" src="music/sanctuary.mp3"></audio>
+      </div>
+    </div>
+    <div class="song-section">
+      <img src="songsalbum/statuealbum.png" alt="Your Universe Album">
+      <div class="song-info">
+        <h3>Statue - Lil Eddie</h3>
+        <button class="play-btn" onclick="playSong('song7')">Play</button>
+        <audio id="song7" src="music/statue.mp3"></audio>
+      </div>
+    </div>
+    <div class="song-section">
+      <img src="songsalbum/paninindigankitaalbum.png" alt="Your Universe Album">
+      <div class="song-info">
+        <h3>Paninindigan Kita - Ben&ben</h3>
+        <button class="play-btn" onclick="playSong('song8')">Play</button>
+        <audio id="song8" src="music/paninindigankita.mp3"></audio>
+      </div>
+    </div>
+    <div class="song-section">
+      <img src="songsalbum/hindiakomawawalaalbum.png" alt="Your Universe Album">
+      <div class="song-info">
+        <h3>Hindi Ako Mawawala - El Manu</h3>
+        <button class="play-btn" onclick="playSong('song9')">Play</button>
+        <audio id="song9" src="music/hindiakomawawala.mp3"></audio>
+      </div>
+    </div>
+    <div class="song-section">
+      <img src="songsalbum/tenerifeseaalbum.png" alt="Your Universe Album">
+      <div class="song-info">
+        <h3>Tenerife Sea - Ed Sheeran</h3>
+        <button class="play-btn" onclick="playSong('song10')">Play</button>
+        <audio id="song10" src="music/tenerifesea.mp3"></audio>
+      </div>
+    </div>
+    <button onclick="goTo('home.html')">Back to Menu</button>
+  </div>
+
+ <footer>
+    <h3>Made with love by Czidane 💕</h3>
+    <h3 class="small">For someone truly special — Kimberly Joy, my gorgeous asawa 🎂</h3>
+  </footer>
+
+  <script>
+    let currentSong = null;
+    function playSong(id) {
+      if (currentSong && currentSong !== document.getElementById(id)) {
+        currentSong.pause();
+        currentSong.currentTime = 0;
+      }
+      const song = document.getElementById(id);
+      if (song.paused) {
+        song.play();
+        currentSong = song;
+      } else {
+        song.pause();
+      }
+    }
+  </script>
+</body>
+</html>
